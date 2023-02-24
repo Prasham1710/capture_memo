@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import useStyles from './styles';
 import { createPost } from '../../actions/posts';
 const Form = () => {
-    const[postData, setPostData] = useState({creator: '' , title:'' , message : ' ', tags: '',selectedFile:'' });
+    const[postData, setPostData] = useState({creator: '' , title:'' , message : '', tags: '',selectedFile:'' });
     const classes = useStyles();
     const dispatch = useDispatch();
 
@@ -20,7 +20,7 @@ const Form = () => {
   return (
     <Paper className={classes.paper}>
       <form autoComplete='off' noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-      <Typography variant ="h6">Creating a memory</Typography>
+      <Typography variant ="h6">Create a post</Typography>
       <TextField name='creator'
                  variant='outlined' 
                  label="Creator"

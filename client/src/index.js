@@ -6,6 +6,7 @@ import {applyMiddleware , compose} from 'redux';
 import { configureStore } from '@reduxjs/toolkit'
 import reducers from './reducers'
 import thunk from 'redux-thunk'
+import './index.css'
 const store = configureStore({reducer : reducers}, compose(applyMiddleware(thunk)))
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
