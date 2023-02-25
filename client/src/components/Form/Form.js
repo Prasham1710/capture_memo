@@ -25,12 +25,12 @@ const Form = ({ currentId, setCurrentId }) => {
         dispatch(createPost(postData))
     }
     const clear =() =>{
-
+        
     }
   return (
     <Paper className={classes.paper}>
       <form autoComplete='off' noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-      <Typography variant ="h6">Create a post</Typography>
+      <Typography variant ="h6">{currentId ? 'Editing' : 'Creating'} a post</Typography>
       <TextField name='creator'
                  variant='outlined' 
                  label="Creator"
